@@ -36,7 +36,7 @@ export function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2">
+    <form onSubmit={handleSubmit} className="space-y-2 w-full">
       <div>
         <label htmlFor="name">Name</label>
         <Input id="name" name="name" placeholder="Name" />
@@ -49,7 +49,12 @@ export function SignupForm() {
       {errors?.email && <p>{errors.email}</p>}
       <div>
         <label htmlFor="password">Password</label>
-        <Input id="password" name="password" type="password" />
+        <Input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="********"
+        />
       </div>
       {errors?.password && (
         <div>

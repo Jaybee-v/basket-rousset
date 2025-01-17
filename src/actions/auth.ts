@@ -1,9 +1,5 @@
 "use server";
-import {
-  SigninFormSchema,
-  SigninFormState,
-  SignupFormSchema,
-} from "@/lib/definitions";
+import { SigninFormSchema, SignupFormSchema } from "@/lib/definitions";
 import { compare, hash } from "@/lib/hashing";
 import { prisma } from "@/lib/prisma";
 import { createSession } from "@/lib/session";
@@ -56,7 +52,7 @@ export async function signup(formData: FormData) {
   await createSession(user.id, role as UserRole);
 }
 
-export async function signin(state: SigninFormState, formData: FormData) {
+export async function signin(formData: FormData) {
   const validatedFields = SigninFormSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),

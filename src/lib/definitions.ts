@@ -40,12 +40,10 @@ export type SignupFormState = {
   message?: string;
 };
 
-export type SigninFormState =
-  | {
-      errors?: {
-        email?: string[];
-        password?: string[];
-      };
-      message?: string;
-    }
-  | undefined;
+export type SigninFormState = {
+  errors?: {
+    email?: string[];
+    password?: string[];
+  };
+  message?: string;
+};
