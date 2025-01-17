@@ -13,7 +13,7 @@ const LINK = (props: {
 }) => (
   <Link
     href={props.href}
-    className="hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl px-4 py-2 tracking-wider font-semibold border border-gray-100 dark:border-gray-700"
+    className="hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl px-4 py-2 tracking-wide font-semibold border border-gray-100 dark:border-gray-700 text-sm"
     onClick={() => props.setIsOpen(false)}
   >
     {props.label}

@@ -13,8 +13,10 @@ export const LogoutButton = ({ onClick }: LogoutButtonProps) => {
         logout();
         onClick();
       }}
+      variant="destructive"
+      className="text-sm"
     >
-      Logout
+      Déconnexion
     </Button>
   );
 };
