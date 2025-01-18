@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { SigninFormState } from "@/lib/definitions";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const SigninForm = () => {
@@ -83,6 +84,12 @@ export const SigninForm = () => {
         <label htmlFor="password">Password</label>
         <Input id="password" name="password" type="password" />
       </div>
+      <Link
+        className="text-xs text-gray-500 hover:text-gray-700 transition-all duration-300 flex justify-end"
+        href="/forgot-password"
+      >
+        Mot de passe oublié
+      </Link>
       {errors?.password && (
         <div>
           <p>Password must:</p>

@@ -9,7 +9,7 @@ export default async function LoginPage() {
   if (isAuth) redirect("/");
 
   return (
-    <div className="p-2 space-y-6 flex flex-col items-center justify-center h-screen w-full md:max-w-md md:mx-auto">
+    <main className="p-2 space-y-6 flex flex-col items-center justify-center h-screen w-full md:max-w-md md:mx-auto">
       <h1 className="text-2xl font-bold">Connexion</h1>
       <SigninForm />
       <Link
@@ -18,6 +18,6 @@ export default async function LoginPage() {
       >
         Je crée mon compte
       </Link>
-    </div>
+    </main>
   );
 }
