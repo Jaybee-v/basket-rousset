@@ -22,9 +22,27 @@ model User {
   emailVerified Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  trainings Training[] @relation("TrainingParticipants")
+  absentsTranings Training[] @relation("TrainingAbsents")
 }
 
 enum UserRole {
   COACH
   USER
+}
+
+model Training {
+  id        String   @id @default(cuid())
+  date      DateTime
+  description String? @db.Text
+  status    TrainingStatus @default(PENDING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  participants User[] @relation("TrainingParticipants")
+  absents User[] @relation("TrainingAbsents")
+}
+
+enum TrainingStatus {
+  PENDING
+  COMPLETED
 }

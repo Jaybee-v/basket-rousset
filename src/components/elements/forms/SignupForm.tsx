@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { SignupFormState } from "@/lib/definitions";
+import { SignupFormState } from "@/lib/definitions/auth.definitions";
 import { useState } from "react";
 
 export function SignupForm() {

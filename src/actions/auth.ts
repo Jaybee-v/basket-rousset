@@ -1,5 +1,8 @@
 "use server";
-import { SigninFormSchema, SignupFormSchema } from "@/lib/definitions";
+import {
+  SigninFormSchema,
+  SignupFormSchema,
+} from "@/lib/definitions/auth.definitions";
 import { compare, hash } from "@/lib/hashing";
 import { prisma } from "@/lib/prisma";
 import { createSession } from "@/lib/session";
@@ -84,5 +87,5 @@ export async function signin(formData: FormData) {
     };
   }
 
-  await createSession(user.id);
+  await createSession(user.id, user.role as UserRole);
 }

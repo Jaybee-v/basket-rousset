@@ -3,7 +3,7 @@ import { signin } from "@/actions/auth";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { SigninFormState } from "@/lib/definitions";
+import { SigninFormState } from "@/lib/definitions/auth.definitions";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 

@@ -4,7 +4,7 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import "server-only";
-import { SessionPayload } from "./definitions";
+import { SessionPayload } from "./definitions/auth.definitions";
 import { prisma } from "./prisma";
 const secretKey = process.env.SESSION_SECRET;
 const encodedKey = new TextEncoder().encode(secretKey);
